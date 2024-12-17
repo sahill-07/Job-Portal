@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:'https://ai-powered-job-portal.onrender.com',
+    origin:"https://ai-powered-job-portal.onrender.com",
     credentials:true
 }
 
@@ -30,7 +30,7 @@ app.get('*' ,  (_ , res) => {
 
 app.use(cors(corsOptions));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8001;
 
 
 // api's
