@@ -25,8 +25,11 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   const logoutHandler = async () => {
+    console.log("log out")
     try {
+      console.log(USER_API_END_POINT); // Should display the correct API URL
       const res = await axios.get(`${USER_API_END_POINT}/logout`, { withCredentials: true });
+      
       if (res.data.success) {
         dispatch(setUser(null));
         navigate('/');
