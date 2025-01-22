@@ -13,6 +13,7 @@ import axios from 'axios';
 import { USER_API_END_POINT } from '@/utils/constant';
 import { setUser } from '@/redux/authSlice';
 import { toast } from 'sonner';
+import './Navbar.css';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,9 +69,13 @@ export const Navbar = () => {
   return (
     <div ref={stickyRef} className={`sticky top-0 z-10 ${isSticky ? 'bg-white shadow' : ''}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-        <h1 className="text-2xl font-bold text-[#F83002] hover:underline">
-          Smart<span className="text-[#F83002]">Hire</span>
-        </h1>
+        <h2 data-text = "SmartHire"  className="font-style text-4xl font-bold pt-3  ">
+        {/* <button class="text-2xl group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 underline underline-offset-2 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur hover:underline hover:underline-offset-4  origin-left hover:decoration-2 hover:text-rose-300 relative bg-neutral-800 h-16 w-64 border text-left pl-4 p-3 text-gray-50 font-bold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg">
+  SmartHire
+</button> */}
+      SmartHire
+
+        </h2>
         <div className="hidden lg:flex items-center gap-12">
           <ul className="flex font-medium items-center gap-5">
             {user && user.role === 'recruiter' ? (

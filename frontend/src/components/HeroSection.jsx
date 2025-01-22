@@ -4,7 +4,7 @@ import { Search } from 'lucide-react';
 import { useDispatch } from 'react-redux';
 import { setSearchedQuery } from '@/redux/jobSlice';
 import { useNavigate } from 'react-router-dom';
-
+import Typewriter from 'typewriter-effect'
 const HeroSection = () => {
     const [query, setQuery] = useState("");
     const dispatch = useDispatch();
@@ -20,7 +20,13 @@ const HeroSection = () => {
             {/* Text Content */}
             <div className="max-w-xl space-y-5 text-center md:text-left pl-10">
                 <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                    Connecting Talent with the Best Opportunities.
+                    <Typewriter
+                        options={{
+                            autoStart:true ,
+                            loop: true ,
+                            delay:90 ,
+                            strings:["Connecting Talent with the Best Opportunities."]
+                        }} />
                 </h1>
                 <p className="text-gray-600 text-lg md:text-xl">
                     Don't just search for jobs; find the right one. Our system provides recommendations based on your strengths and preferences, bringing the best opportunities directly to you.

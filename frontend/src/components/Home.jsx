@@ -18,7 +18,7 @@ const Home = () => {
     }
   }, []);
   return (
-    <div>
+    <div className='font-nody'>
       <Navbar />
       <HeroSection />
       <LatestJobs />
